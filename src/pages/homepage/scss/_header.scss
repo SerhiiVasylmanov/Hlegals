@@ -1,0 +1,230 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 65px;
+  &__logo {
+    position: relative;
+    img {
+      display: none;
+      &:nth-child(1) {
+        display: block;
+      }
+    }
+    .navbar-light {
+      position: unset !important;
+      display: none;
+      .navbar-toggler {
+        @include btn-reset();
+        &:focus {
+          box-shadow: none;
+        }
+      }
+      #navbar {
+        position: absolute !important;
+        top: 90%;
+        left: 0;
+        right: 0;
+        background: $white;
+        z-index: 9999;
+        padding: 0 !important;
+        .navbar-nav {
+          margin: 0;
+          li {
+            @include title-h4();
+            padding: 15px;
+            text-align: center;
+            background: #f5f5fa;
+            margin-bottom: 2px;
+            a {
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    .btn-language {
+      margin-right: 20px;
+      button {
+        @include btn-reset();
+        padding: 5px;
+        color: $white;
+        @include btn-text();
+        &:hover {
+          background: $red;
+          border-radius: 8px;
+        }
+      }
+    }
+    span {
+      margin-right: 30px;
+      color: $white;
+      @include additional-text();
+      font-weight: 300;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        left: 17%;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $white;
+      }
+    }
+
+    &-phone {
+      color: $white;
+      @include phone-link();
+      &:hover {
+        color: $red;
+        text-decoration: none;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        right: 38%;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $white;
+      }
+    }
+
+    &-social {
+      margin-left: 26px;
+      svg path {
+        &:hover {
+          fill: blue;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        right: 6%;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $white;
+      }
+    }
+  }
+
+  &__menu {
+    &-list {
+      display: flex;
+      justify-content: flex-end;
+      li {
+        margin-left: 15px;
+        a {
+          @include menu-link();
+          color: $white;
+          &:hover {
+            color: $red;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    flex-direction: column;
+    margin-bottom: 100px;
+    *::before {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    flex-direction: column-reverse;
+    margin-bottom: 100px;
+    align-items: unset;
+    *::before {
+      display: none;
+    }
+    &__content {
+      margin-bottom: 10px;
+    }
+    &__logo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .navbar-light {
+        display: block;
+      }
+    }
+    &__contact {
+      justify-content: space-between;
+      span {
+        display: none;
+      }
+      &-social {
+        display: none;
+      }
+    }
+    &__menu {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: 365px !important;
+  }
+  .header {
+    flex-direction: column-reverse;
+    margin-bottom: 100px;
+    align-items: unset;
+    *::before {
+      display: none;
+    }
+    &__content {
+      margin-bottom: 10px;
+    }
+    &__logo {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 70%;
+      }
+      .menu-hamburger {
+        display: block;
+        svg {
+          width: 100%;
+        }
+      }
+    }
+    &__contact {
+      justify-content: space-between;
+      span {
+        display: none;
+      }
+      &-social {
+        display: none;
+      }
+    }
+    &__menu {
+      display: none;
+    }
+  }
+}

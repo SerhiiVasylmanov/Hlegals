@@ -1,0 +1,13 @@
+.form {
+  background-color: #f5f5fa;
+  padding: 20px;
+
+  &__heading {
+    @include title-h2;
+    color: $red;
+  }
+
+  &__input {
+    margin: 0 0 10px 0;
+  }
+}

@@ -1,0 +1,119 @@
+.slide-team {
+  margin-bottom: 40px;
+}
+
+.carousel-team {
+  position: relative !important;
+  bottom: 0 !important;
+  left: unset !important;
+  z-index: 15;
+  width: 100% !important;
+  padding-left: 0;
+  margin-left: unset !important;
+  li {
+    background-color: $blue !important;
+    opacity: 0.2;
+    width: 16px !important;
+    height: 16px !important;
+    border: none !important;
+    margin: 0 !important;
+    margin-right: 15px !important;
+  }
+  .active {
+    background-color: $blue !important;
+  }
+}
+
+.team {
+  background: $bggrey;
+  border-radius: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  &__image {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1 0 413px;
+  }
+  &__info {
+    padding: 40px;
+    flex: 2 0 520px;
+    a {
+      @include btn-reset();
+      padding: 0;
+      margin-bottom: 5px;
+      &:hover span,
+      &:hover svg path {
+        color: $red;
+        stroke: $red;
+      }
+      &:hover {
+        text-decoration: none;
+      }
+      span {
+        @include button-text();
+        text-transform: uppercase;
+        color: $blue;
+        vertical-align: middle;
+      }
+    }
+    h2 {
+      @include title-h2();
+      background: $red-pink-gradient;
+      @include text-fill-color();
+      margin-bottom: 20px;
+    }
+    h5 {
+      @include title-h5();
+      color: $grey;
+      margin-bottom: 5px;
+    }
+    p {
+      @include paragraph-min();
+      color: $grey;
+    }
+  }
+}
+.employee-data {
+  display: flex;
+  align-items: center;
+  &__image {
+    margin-right: 10px;
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: 365px !important;
+  }
+  .team {
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding: 20px !important;
+    &__image {
+      display: none;
+      img {
+        width: 17%;
+        border-radius: 50%;
+      }
+    }
+    &__info {
+      padding: 0;
+      flex: unset;
+      h2 {
+        @include mobile_title-h2();
+      }
+      p {
+        @include mobile_paragraph-min();
+      }
+    }
+  }
+  .employee-data {
+    &__image {
+      display: block;
+    }
+  }
+}

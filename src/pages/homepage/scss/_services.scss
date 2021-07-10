@@ -1,0 +1,134 @@
+.services__btn {
+  a {
+    @include btn-reset();
+    padding: 0;
+    margin-bottom: 5px;
+    &:hover span,
+    &:hover svg path {
+      color: $red;
+      stroke: $red;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+    span {
+      @include button-text();
+      text-transform: uppercase;
+      color: rgba($white, 0.5);
+      vertical-align: middle;
+    }
+  }
+}
+
+.services {
+  h2 {
+    @include title-h2();
+    background: $red-pink-gradient;
+    @include text-fill-color();
+    margin-bottom: 70px;
+  }
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(413px, 0fr));
+  grid-gap: 60px 25px;
+  grid-auto-flow: dense;
+  justify-content: center;
+  &__item {
+    img {
+      padding: 14px;
+      background: $white;
+      border-radius: 24px;
+      margin-bottom: 20px;
+    }
+    a {
+      h4 {
+        @include title-h4();
+        color: $blue;
+        margin-bottom: 15px;
+        &:hover {
+          color: $red;
+        }
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    p {
+      @include paragraph();
+      color: $white;
+    }
+  }
+  &__items:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  &__items:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+  &__items:nth-child(3) {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+  &__items:nth-child(4) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  &__items:nth-child(5) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+  &__items:nth-child(6) {
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  .header {
+    flex-direction: column;
+    margin-bottom: 100px;
+    *::before {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: 365px !important;
+  }
+  .services {
+    h2 {
+      @include mobile_title-h2();
+    }
+  }
+  .services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    &__item {
+      display: flex;
+      flex-wrap: wrap;
+      img {
+        max-width: 64px;
+        max-height: 64px;
+        margin-right: 10px;
+        align-self: center;
+        margin-bottom: 0;
+      }
+      h4 {
+        @include title-h4();
+        flex: 1 0 0;
+      }
+      p {
+        @include paragraph();
+        color: $white;
+      }
+    }
+  }
+}

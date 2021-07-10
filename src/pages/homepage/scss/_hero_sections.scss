@@ -1,0 +1,88 @@
+.herosections {
+  height: 100vh;
+}
+
+.main {
+  position: relative;
+  margin-bottom: 100px;
+  &__symbol {
+    display: block;
+    margin: 0 auto;
+  }
+  &__symbol-longleg {
+    position: absolute;
+    top: 125px;
+    left: calc(50% - 300px);
+    z-index: 1;
+  }
+  &__title {
+    max-width: 600px;
+    @include title-h1();
+    color: $white;
+    position: absolute;
+    top: 190px;
+    left: calc(50% - 300px);
+    text-align: center;
+    z-index: 2;
+  }
+  &__btn-scroll {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+    @include btn-reset();
+    position: relative;
+    z-index: 3;
+    left: calc(50% - 27px);
+    bottom: 0;
+    animation-name: animateScroll;
+    animation-iteration-count: infinite;
+    animation-duration: 0.7s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    @keyframes animateScroll {
+      0% {
+      }
+
+      100% {
+        left: calc(50% - 27px);
+        bottom: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 790px) {
+  .herosections {
+    height: 100vh;
+  }
+  .main {
+    margin-bottom: 40px;
+    &__symbol {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: 365px !important;
+  }
+  .herosections {
+    height: 100vh;
+  }
+  .main {
+    margin-bottom: 40px;
+    &__symbol {
+      display: none;
+    }
+    &__symbol-longleg {
+      position: relative;
+      top: 0;
+      max-width: 335px;
+      left: unset;
+    }
+    &__title {
+      top: 0;
+      left: 0;
+    }
+  }
+}

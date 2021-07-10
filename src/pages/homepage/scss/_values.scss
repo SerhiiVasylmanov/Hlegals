@@ -1,0 +1,176 @@
+#experience {
+  margin-bottom: 80px;
+}
+.values-carousel {
+  display: flex;
+  flex-direction: row;
+  &__pagination {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    left: unset !important;
+    bottom: unset !important;
+    z-index: 15;
+    margin: 0 !important;
+    list-style: none !important;
+    li {
+      width: unset !important;
+      height: unset !important;
+      text-indent: unset !important;
+      text-align: center;
+      list-style: none;
+      border: none !important;
+      border-right: 4px solid #e6e6f0 !important;
+      border-radius: unset !important;
+      box-sizing: border-box !important;
+      margin: 0 !important;
+      padding: 10px 40px 10px 0 !important;
+      max-width: 550px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      @include title-h2();
+      color: $grey !important;
+      margin-bottom: 20px;
+      text-align: right;
+    }
+    .active {
+      border-radius: unset !important;
+      border-right: 4px solid #f0145a !important;
+      box-sizing: border-box !important;
+      background-color: unset !important;
+      background: $pink-red-gradient;
+      @include text-fill-color();
+    }
+  }
+  &__pagination2 {
+    display: none !important;
+  }
+  .values-carousel__slide {
+    margin: auto;
+    margin-left: 40px;
+  }
+  .item {
+    h3 {
+      @include title-h3();
+      color: $white;
+      margin-bottom: 20px;
+    }
+    p {
+      @include introduction();
+      color: $white;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  #experience {
+    margin-bottom: 45px;
+  }
+  .values-carousel {
+    display: flex;
+    flex-direction: column;
+    &__pagination {
+      display: block !important;
+      width: 100% !important;
+      li {
+        border: none !important;
+        display: none !important;
+        text-align: left !important;
+      }
+      .active {
+        border: none !important;
+        display: block !important;
+        @include mobile_title-h2();
+        padding: 0 !important;
+        display: block !important;
+      }
+    }
+    .values-carousel__slide {
+      margin-bottom: 20px !important;
+    }
+    .item {
+      h3 {
+        @include mobile_title-h3();
+      }
+      p {
+        @include introduction();
+      }
+    }
+    &__pagination2 {
+      display: block !important;
+      margin: 0 !important;
+      left: unset !important;
+      width: 100% !important;
+      position: relative !important;
+      li {
+        background-color: rgba(36, 163, 255, 0.2) !important;
+        border: none !important;
+      }
+      .active {
+        background-color: $blue !important;
+      }
+    }
+    .values-carousel__slide {
+      margin: auto;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: 365px !important;
+  }
+  #experience {
+    margin-bottom: 45px;
+  }
+  .values-carousel {
+    display: flex;
+    flex-direction: column;
+    &__pagination {
+      display: block !important;
+      width: 100% !important;
+      li {
+        border: none !important;
+        display: none !important;
+        text-align: left !important;
+      }
+      .active {
+        border: none !important;
+        display: block !important;
+        @include button-text();
+        padding: 0 !important;
+        display: block !important;
+        margin: 0 auto !important;
+      }
+    }
+    .values-carousel__slide {
+      margin-bottom: 20px !important;
+    }
+    .item {
+      h3 {
+        @include mobile_title-h3();
+      }
+      p {
+        @include mobile_introduction();
+      }
+    }
+    &__pagination2 {
+      display: block !important;
+      margin: 0 !important;
+      left: unset !important;
+      width: 100% !important;
+      position: relative !important;
+      li {
+        background-color: rgba(36, 163, 255, 0.2) !important;
+        border: none !important;
+      }
+      .active {
+        background-color: $blue !important;
+      }
+    }
+    .values-carousel__slide {
+      margin: auto;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.wrapper {
+  padding: 50px 0 100px;
+  margin-bottom: 60px;
+  background: linear-gradient(
+    42.01deg,
+    #323264 14.33%,
+    #323264 51.39%,
+    #7a425e 87.53%
+  );
+  border-radius: 0px 0px 12px 12px;
+}
+
+.wrapper-wrapper {
+  background: #f5f5fa;
+  padding: 40px 0 0;
+}
+
+.container {
+  width: 1320px !important;
+  margin: 0 auto;
+}
+
+@media (max-width: 375px) {
+  .wrapper {
+    padding: 20px 0 40px;
+    margin-bottom: 20px;
+  }
+  .wrapper-wrapper {
+    padding: 20px 0 0;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;800&display=swap");
+@import "../../../assets/scss/common/mixins";
+@import "../../../assets/scss/common/variables";
+@import "./_header";
+@import "./_hero_sections";
+@import "./_services";
+@import "./_team";
+@import "./_cases";
+@import "./_clients";
+@import "./_publications";
+@import "./_values";
+@import "./_footer";

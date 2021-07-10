@@ -1,0 +1,182 @@
+// @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;800&display=swap");
+
+@mixin title-h1() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 45px;
+}
+
+@mixin title-h2() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 42px;
+  line-height: 50px;
+}
+
+@mixin title-h3() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+@mixin title-h4() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+@mixin title-h5() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+@mixin title-h6() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+}
+
+@mixin number-title() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+@mixin menu-link() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+@mixin phone-link() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+@mixin btn-text() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+@mixin introduction() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 30px;
+}
+
+@mixin paragraph() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+@mixin paragraph-min() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin additional-text_min() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+@mixin additional-text() {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+@mixin button-text() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@mixin text-fill-color() {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin btn-reset() {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+///////////////mobile ////////////////////////
+
+@mixin mobile_title-h2() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 37px;
+}
+
+@mixin mobile_title-h3() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+@mixin mobile_title-h4() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+@mixin mobile_introduction() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+@mixin mobile_paragraph() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin mobile_paragraph-min() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@mixin mobile_additional-text() {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+@mixin mobile_button-text() {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,104 @@
+.container {
+  width: 1320px !important;
+  margin: 0 auto;
+}
+
+.wrapper-wrapper {
+  background: #f5f5fa;
+  padding: 0 0 0;
+  border-radius: 12px 12px 0 0;
+}
+
+@media (max-width: 375px) {
+  .wrapper-wrapper {
+    padding: 20px 0;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;800&display=swap");
+@import "../../../assets/scss/common/mixins";
+@import "../../../assets/scss/common/variables";
+@import "../../homepage/scss/_header";
+
+.header {
+  padding: 50px 0 20px;
+  &__logo {
+    img {
+      &:nth-child(1) {
+        display: none;
+      }
+      &:nth-child(3) {
+        display: block;
+      }
+    }
+  }
+  &__contact {
+    .btn-language {
+      button {
+        color: $grey;
+        &:hover {
+          background: $red;
+          border-radius: 8px;
+          color: $white;
+        }
+      }
+    }
+    span {
+      color: $grey;
+    }
+
+    &-phone {
+      color: $grey;
+
+      &::before {
+        background: $grey;
+      }
+    }
+
+    &-social {
+      svg path {
+        fill: $grey;
+        &:hover {
+          fill: blue;
+        }
+      }
+      &::before {
+        background: $grey;
+      }
+    }
+  }
+
+  &__menu {
+    &-list {
+      li {
+        a {
+          color: $blue;
+        }
+        &:nth-child(3) {
+          a {
+            color: $red;
+            border-bottom: 2px solid $red;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 375px) {
+  .header {
+    padding: 20px 0 10px;
+    margin-bottom: 20px;
+  }
+  .navbar-toggler {
+    svg path {
+      stroke: $black;
+    }
+  }
+}
+
+@import "./_team_info";
+@import "../../homepage/scss/_footer";
+
+.footer {
+  border: none;
+}

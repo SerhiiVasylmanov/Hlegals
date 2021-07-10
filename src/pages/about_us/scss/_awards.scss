@@ -1,0 +1,65 @@
+.awards {
+  h6 {
+    @include title-h6();
+    color: $darkindigo;
+    text-align: center;
+    margin: 0 0 30px;
+    text-transform: uppercase;
+  }
+}
+
+.blog {
+  margin-bottom: 20px;
+}
+
+.carousel-inner {
+  margin-bottom: 30px;
+}
+
+.col-md-3 {
+  .awards__image {
+    padding: 25px 0;
+    background-color: $white;
+    border-radius: 12px;
+    text-align: center;
+  }
+}
+
+.carousel-indicators {
+  position: relative !important;
+  left: unset !important;
+  z-index: 15;
+  width: 100% !important;
+  padding: 0 !important;
+  margin-left: unset !important;
+  text-align: center;
+  list-style: none;
+  bottom: unset !important;
+
+  li {
+    background-color: $blue !important;
+    opacity: 0.2;
+    width: 16px !important;
+    height: 16px !important;
+    border: none !important;
+    margin: 0 !important;
+    margin-right: 15px !important;
+  }
+
+  .active {
+    background-color: $blue !important;
+    opacity: 1 !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    width: 365px !important;
+  }
+
+  .col-md-3 {
+    .awards__image {
+      margin: 0 10px 10px;
+    }
+  }
+}

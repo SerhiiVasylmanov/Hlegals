@@ -1,0 +1,147 @@
+.team-member-page {
+  display: flex;
+  margin-bottom: 80px;
+}
+.team__image {
+  margin-right: 40px;
+  text-align: right;
+  img {
+    border-radius: 12px;
+    margin-bottom: 25px;
+  }
+  a {
+    svg {
+      transform: rotate(-90deg);
+    }
+  }
+}
+.team__info {
+  h2 {
+    @include title-h2();
+    background: $pink-red-gradient;
+    @include text-fill-color();
+    margin: 10px 0;
+  }
+  &-social {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 4px solid #e6e6f0;
+    p {
+      margin: 0 15px 0 0;
+      padding-right: 10px;
+      @include paragraph-min();
+      color: $grey;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 9px;
+        right: 0;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $ltgrey;
+      }
+    }
+    a {
+      margin-right: 15px;
+      @include additional-text();
+      font-weight: 300;
+      color: $blue;
+      position: relative;
+      &:hover {
+        text-decoration: none;
+        color: $red;
+      }
+      &:nth-child(2) {
+        padding-right: 10px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 7px;
+          right: 0;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: $ltgrey;
+        }
+      }
+    }
+  }
+  &-bio {
+    p {
+      @include paragraph();
+      color: $black;
+      margin-bottom: 40px;
+    }
+    h6 {
+      @include title-h6();
+      color: $darkindigo;
+      margin: 0 0 10px 0;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    width: 365px !important;
+  }
+  .team-member-page {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+  .team__image {
+    margin-right: 0;
+    text-align: right;
+    img {
+      max-width: 335px;
+      margin-bottom: 10px;
+    }
+  }
+  .team__info {
+    h2 {
+      @include mobile_title-h2();
+      margin: 0 0 10px 0;
+    }
+    &-social {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 4px solid #e6e6f0;
+      p {
+        margin: 0 0 10px 0;
+        padding: 0;
+        &::before {
+          content: "";
+          display: none;
+        }
+      }
+      a {
+        margin-right: 0;
+        &:nth-child(2) {
+          padding-right: 0;
+          margin-bottom: 10px;
+          &::before {
+            content: "";
+            display: none;
+          }
+        }
+      }
+    }
+    &-bio {
+      p {
+        @include paragraph();
+        color: $black;
+        margin-bottom: 20px;
+      }
+      h6 {
+        @include title-h6();
+        color: $darkindigo;
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+}

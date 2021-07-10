@@ -1,0 +1,96 @@
+.services__item {
+  &-intro {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 80px;
+    img {
+      padding: 14px;
+      background: $white;
+      border-radius: 24px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      @include title-h2();
+      background: $red-pink-gradient;
+      @include text-fill-color();
+      margin: 0 0 20px;
+    }
+    p {
+      @include paragraph();
+      color: $white;
+      margin: 0 0 40px;
+    }
+    button {
+      min-width: 250px;
+      padding: 16px 5px;
+      background-color: $blue;
+      box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+      border-radius: 12px;
+      @include button-text();
+      text-align: center;
+      color: $white;
+      cursor: pointer;
+      border: none;
+      &:hover {
+        background-color: $white;
+        color: $blue;
+      }
+    }
+  }
+  &-info {
+    border-top: 4px solid $grey;
+    padding-top: 20px;
+    h4 {
+      @include title-h4();
+      color: $white;
+      margin: 0 0 20px;
+    }
+    .service__direction {
+      display: flex;
+      justify-content: space-between;
+      ol {
+        list-style: inside;
+        color: $red;
+        max-width: 550px;
+        ::marker {
+          color: $red;
+        }
+      }
+      li {
+        @include paragraph();
+        color: $white;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    width: 365px !important;
+  }
+  .services__item {
+    &-intro {
+      text-align: left;
+      max-width: 850px;
+      margin: 0 auto 40px;
+      h2 {
+        @include mobile_title-h2();
+        margin: 0 0 20px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    &-info {
+      h4 {
+        @include mobile_title-h4();
+        margin: 0 0 20px;
+      }
+      .service__direction {
+        flex-direction: column;
+      }
+    }
+  }
+}
