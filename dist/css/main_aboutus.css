@@ -355,7 +355,7 @@ table {
     color: #f0145a;
     border-bottom: 2px solid #f0145a; }
 
-@media (max-width: 375px) {
+@media (max-width: 575px) {
   .header {
     padding: 20px 0 10px;
     margin-bottom: 20px; }
@@ -424,7 +424,7 @@ table {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }
 
-@media (max-width: 375px) {
+@media (max-width: 575px) {
   .container {
     width: 365px !important; }
   .skills {
@@ -507,7 +507,7 @@ table {
     max-width: 420px;
     margin: 0; }
 
-@media (max-width: 375px) {
+@media (max-width: 575px) {
   .container {
     width: 365px !important; }
   .team__image {
@@ -587,7 +587,7 @@ table {
     background-color: #24a3ff !important;
     opacity: 1 !important; }
 
-@media (max-width: 375px) {
+@media (max-width: 575px) {
   .container {
     width: 365px !important; }
   .col-md-3 .awards__image {

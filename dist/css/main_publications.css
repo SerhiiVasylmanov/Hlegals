@@ -355,7 +355,7 @@ table {
     color: #f0145a;
     border-bottom: 2px solid #f0145a; }
 
-@media (max-width: 375px) {
+@media (max-width: 575px) {
   .header {
     padding: 20px 0 10px;
     margin-bottom: 20px; }
@@ -474,7 +474,7 @@ table {
       background-color: #ffffff;
       color: #24a3ff; }
 
-@media (max-width: 375px) {
+@media (max-width: 575px) {
   .container {
     width: 365px !important; }
   .publications h2 {

@@ -601,9 +601,8 @@ table {
   .container {
     width: 365px !important; }
   .clients-grid {
-    grid-template-columns: repeat(auto-fit, minmax(187px, 0fr));
-    grid-auto-rows: 90px;
-    grid-template-rows: unset; }
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr; }
     .clients-grid__item img {
       width: 50%; } }
 
